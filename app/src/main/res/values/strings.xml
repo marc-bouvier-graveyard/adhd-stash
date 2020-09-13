@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ADHD Stash</string>
+    <string name="stashButtonLabel" >Stash</string>
+    <string name="unstashButtonLabel" >Unstash</string>
+    <string name="stashData">stashData</string>
+    <string name="stashDataKey">stashDataKey</string>
 </resources>
