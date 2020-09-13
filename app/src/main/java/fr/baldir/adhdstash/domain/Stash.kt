@@ -18,8 +18,22 @@ class Stash {
     fun unstash(): String {
         return this.stack.removeFirst()
     }
-    //FIXME : this is persistence concern, should be moved outside core domain
-    fun toPersistFormat():String{
-        return stack.joinToString(separator = "|||")
+
+    /**
+     * Persistence related companion object to keep the domain pure.
+     */
+    companion object Persistence{
+
+        fun fromString(string:String):Stash{
+            val stash = Stash()
+            string.split("|||")
+                .reversed()
+                .forEach{stash.stash(it)}
+            return stash
+        }
+
+        fun Stash.toPersistFormat():String{
+            return stack.joinToString(separator = "|||")
+        }
     }
 }

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import fr.baldir.adhdstash.domain.Stash
+import fr.baldir.adhdstash.domain.Stash.Persistence.toPersistFormat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
